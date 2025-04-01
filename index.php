@@ -61,8 +61,47 @@
                 </div>
             </div>
         </div>
-        <div class="row"></div>
-        <div class="row"></div>
+        <div class="dropdown-divider border-warning"></div>
+        <div class="row">
+            <div class="table-responsive" id="orderTable">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">CLient</th>
+                        <th scope="col">Caissier</th>
+                        <th scope="col">Montant</th>
+                        <th scope="col">Perçu</th>
+                        <th scope="col">Retourné</th>
+                        <th scope="col">Etat</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <?php for($i = 0; $i < 100; $i++): ?>
+                        <tr>
+                            <th scope="row"><?= $i ?></th>
+
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>
+                                <a href="#" class="text-info me-2 infoBtn" title="Voir détails"><i class="fas
+                                fa-info-circle"></i></a>
+                                <a href="#" class="text-primary me-2 editBtn" title="Modifier"><i class="fas
+                                fa-edit"></i></a>
+                                <a href="#" class="text-danger me-2 deleteBtn" title="Supprimer"><i class="fas
+                                fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                        <?php endfor; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
         <div class="row"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
                 referrerpolicy="no-referrer"></script>
