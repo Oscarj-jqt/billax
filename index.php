@@ -146,7 +146,7 @@
                         </div>
                     </div>
                     <div class="col-md">
-                        <div class="form-floating mb-3">
+                        <div class="form-floating">
                             <select class="form-select" id="state" aria-label="state" name="state">
                                 <option value="Facturée">Facturée</option>
                                 <option value="Payée">Payée</option>
@@ -159,7 +159,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                <button type="button" class="btn btn-primary">Ajouter <i class="fas fa-plus"></i> </button>
+                <button type="button" class="btn btn-primary" name="create" id="create">Ajouter <i class="fas fa-plus"></i> </button>
             </div>
         </div>
     </div>
