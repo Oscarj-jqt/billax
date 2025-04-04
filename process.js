@@ -2,7 +2,7 @@ $(function() {
     $('table').DataTable();
 
     //créer une facture
-    $('insert').on('click', function (e) {
+    $('create').on('click', function (e) {
         let formOrder = $('#formOrder')
         if (formOrder[0].checkValidity()) {
             e.preventDefault();
@@ -11,7 +11,12 @@ $(function() {
                 type: 'post',
                 data: formOrder.serialize() + '&action=create',
                 success: function(response) {
-                    console.log(response);
+                    $('#createModal').modal('hide');
+                    Swal.fire({
+                        icon: 'success',
+                        title:'Succès',
+                    })
+                    formOrder[0].reset();
                 }
             })
         }
