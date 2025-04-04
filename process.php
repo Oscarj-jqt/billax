@@ -7,3 +7,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'create') {
     $db->create($customer, $cashier, (int)$amount, (int)$received, (int)$returned, $state);
     echo 'perfect';
 }
+
+// Récupérer les factures
+if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
+    $output = '';
+    $db->countBills();
+}
