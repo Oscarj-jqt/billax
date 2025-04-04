@@ -28,4 +28,10 @@ class Database
             "state" => $state
         ]);
     }
+
+    public function read()
+    {
+        return $this->getconnexion()->query("SELECT * FROM factures ORDER BY id id")->fetchAll
+        (PDO::FETCH_OBJ);
+    }
 }
