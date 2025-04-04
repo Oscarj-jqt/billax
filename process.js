@@ -22,4 +22,15 @@ $(function() {
         }
     })
 
+    // Récupérer les factures
+    function getBills() {
+        $.ajax({
+            url: 'process.php',
+            type: 'post',
+            data: { action: 'fetch'},
+            success: function (response) {
+                console.log(response);
+            }
+        })
+    }
 })
