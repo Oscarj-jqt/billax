@@ -34,4 +34,9 @@ class Database
         return $this->getconnexion()->query("SELECT * FROM factures ORDER BY id id")->fetchAll
         (PDO::FETCH_OBJ);
     }
+
+    public function countBills(): int
+    {
+        return (int)$this->getconnexion()->query("SELECT COUNT(id) as count FROM factures")->fetch([0]);
+    }
 }
