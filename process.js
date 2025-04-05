@@ -2,7 +2,7 @@ $(function() {
     $('table').DataTable();
 
     //créer une facture
-    $('create').on('click', function (e) {
+    $('#create').on('click', function (e) {
         let formOrder = $('#formOrder')
         if (formOrder[0].checkValidity()) {
             e.preventDefault();

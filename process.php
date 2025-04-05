@@ -3,7 +3,7 @@ $db = new Database();
 // Création des factures
 if (isset($_POST['action']) && $_POST['action'] == 'create') {
     extract($_POST);
-    $returned = (int)$received - (int)$amount;
+    $returned = (int)$receive - (int)$amount;
     $db->create($customer, $cashier, (int)$amount, (int)$received, (int)$returned, $state);
     echo 'perfect';
 }
@@ -33,12 +33,12 @@ if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
                 $output .= "
                     <tr>
                         <th scope=\"row\">$bill->id</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                        <td>$bill->customer</td>
+                        <td>$bill->cashier</td>
+                        <td>$bill->amount</td>
+                        <td>$bill->received</td>
+                        <td>$bill->returned</td>
+                        <td>$bill->state</td>
                         <td>
                             <a href=\"#\" class=\"text-info me-2 infoBtn\" title=\"Voir détails\"><i class=\"fas
                             fa-info-circle\"></i></a>
