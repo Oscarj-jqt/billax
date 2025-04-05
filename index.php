@@ -73,7 +73,7 @@
     </div>
 
     <div class="dropdown-divider border-warning"></div>
-    <div class="row">g
+    <div class="row">
         <div class="table-responsive" id="orderTable">
             <h3 class="text-success text-center">Chargement des factures...</h3>
         </div>

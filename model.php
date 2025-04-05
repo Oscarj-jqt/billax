@@ -31,12 +31,11 @@ class Database
 
     public function read()
     {
-        return $this->getconnexion()->query("SELECT * FROM factures ORDER BY id id")->fetchAll
-        (PDO::FETCH_OBJ);
+        return $this->getconnexion()->query("SELECT * FROM factures ORDER BY id DESC")->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function countBills(): int
     {
-        return (int)$this->getconnexion()->query("SELECT COUNT(id) as count FROM factures")->fetch([0]);
+        return (int)$this->getconnexion()->query("SELECT COUNT(id) as count FROM factures")->fetch(PDO::FETCH_OBJ)->count;
     }
 }
