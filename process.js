@@ -23,13 +23,15 @@ $(function() {
     })
 
     // Récupérer les factures
+    getBills();
     function getBills() {
         $.ajax({
             url: 'process.php',
             type: 'post',
             data: { action: 'fetch'},
             success: function (response) {
-                console.log(response);
+                $('#orderTable').html(response);
+                $('table').DataTable();
             }
         })
     }

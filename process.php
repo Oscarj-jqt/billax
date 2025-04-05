@@ -32,7 +32,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
             foreach ($bills as $bill) {
                 $output .= "
                     <tr>
-                        <th scope=\"row\"><?= $i ?></th>
+                        <th scope=\"row\">$bill->id</th>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
@@ -49,10 +49,11 @@ if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
                         </td>
                     </tr>
                     ";
-
-
             }
+
+            $output .= "</tbody></table>";
+            echo $output;
     }
 } else {
-
+    echo "<h3>Aucunes factures pour le moment</h3>";
 }

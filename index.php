@@ -60,7 +60,6 @@
     </div>
 
     <div class="dropdown-divider border-warning"></div>
-
     <div class="row">
         <div class="col-md-6">
             <h5 class="fw-bold mb-0">Liste des factures</h5>
@@ -74,11 +73,9 @@
     </div>
 
     <div class="dropdown-divider border-warning"></div>
-
-    <div class="row">
+    <div class="row">g
         <div class="table-responsive" id="orderTable">
-            <?php for ($i = 0; $i < 100; $i++): ?>}
-            <?php endfor; ?>
+            <h3 class="text-success text-center">Chargement des factures...</h3>
         </div>
     </div>
 </section>
