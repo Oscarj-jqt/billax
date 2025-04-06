@@ -31,8 +31,12 @@ $(function() {
             data: { action: 'fetch'},
             success: function (response) {
                 $('#orderTable').html(response);
-                $('table').DataTable();
+                $('table').DataTable({
+                    order : [0, 'desc']
+                });
             }
         })
     }
+
+
 })

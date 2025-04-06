@@ -80,23 +80,23 @@
     </div>
 </section>
 
-<!-- Modal -->
-<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createModalLabel">Nouvelle facture</h5>
+                <h5 class="modal-title" id="createModalLabel">Modifier facture</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="post" id="formOrder">
+                <form action="" method="post" id="formUpdateOrder">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="customer" name="customer">
-                        <label for="customer">Nom du client</label>
+                        <label for="customerUpdate">Nom du client</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="cashier" name="cashier">
-                        <label for="cashier">Nom du caissier</label>
+                        <label for="cashierUpdate">Nom du caissier</label>
                     </div>
                     <div class="row g-2">
                         <div class="col-md">
@@ -108,8 +108,8 @@
                     </div>
                     <div class="col-md">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="receive" name="receive">
-                            <label for="receive">Montant perçu</label>
+                            <input type="text" class="form-control" id="received" name="received">
+                            <label for="received">Montant perçu</label>
                         </div>
                     </div>
                     <div class="col-md">
@@ -126,7 +126,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                <button type="button" class="btn btn-primary" name="create" id="create">Ajouter <i class="fas fa-plus"></i> </button>
+                <button type="button" class="btn btn-primary" name="update" id="update">Mettre à jour <i
+                            class="fas fa-sync"></i> </button>
             </div>
         </div>
     </div>
