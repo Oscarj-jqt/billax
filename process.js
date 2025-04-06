@@ -38,5 +38,15 @@ $(function() {
         })
     }
 
-
+    $('body').on('click', '.editBtn', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'process.php',
+            type: 'post',
+            data: {workingId: this.dataset.id},
+            success: function(response) {
+                console.log(responseg)
+            }
+        })
+    })
 })
