@@ -1,6 +1,7 @@
 <?php
+require_once 'model.php';
 $db = new Database();
-// Création des factures
+// Create new bills
 if (isset($_POST['action']) && $_POST['action'] == 'create') {
     extract($_POST);
     $returned = (int)$received - (int)$amount;
@@ -8,7 +9,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'create') {
     echo 'perfect';
 }
 
-// Récupérer les factures
+// Create new bills
 if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
     $output = '';
     if ($db->countBills() > 0) {
@@ -56,4 +57,10 @@ if (isset($_POST['action']) && $_POST['action'] == 'fetch') {
     }
 } else {
     echo "<h3>Aucunes factures pour le moment</h3>";
+}
+
+// Info to get bill description
+if (isset($_POST['workingId'])){
+    $workingId = (int)$_POST['workingId'];
+    $currentBill = $db->getSingleBill();
 }

@@ -38,4 +38,11 @@ class Database
     {
         return (int)$this->getconnexion()->query("SELECT COUNT(id) as count FROM factures")->fetch(PDO::FETCH_OBJ)->count;
     }
+
+    public function getSingleBill(int $id)
+    {
+        $q = $this->getconnexion()->prepare("SELECT * FROM factures WHERE id = :id");
+        $q->execute(['id' => $id]);
+        return $q->fetch(PDO::FETCH_OBJ);
+    }
 }
